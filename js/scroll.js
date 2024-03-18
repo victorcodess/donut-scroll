@@ -34,7 +34,7 @@ setInterval(() => {
 }, 33.3);
 
 //Text Animation
-const textAnim = TweenMax.fromTo(text, 3, { opacity: 1 }, { opacity: 0 });
+const textAnim = TweenMax.fromTo(text, 3, { opacity: 1 }, { opacity: 0, immediateRender: false });
 let scene2 = new ScrollMagic.Scene({
   duration: 3000,
   triggerElement: intro,
@@ -44,7 +44,7 @@ let scene2 = new ScrollMagic.Scene({
   .addTo(controller);
 
 //End Animation
-const endAnim = TweenMax.fromTo(end, 1, { opacity: 0 }, { opacity: 1 });
+const endAnim = TweenMax.fromTo(end, 1, { opacity: 0 }, { opacity: 1, immediateRender: false });
 let scene3 = new ScrollMagic.Scene({
   duration: 1000,
   triggerElement: outro,
