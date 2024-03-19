@@ -1,3 +1,5 @@
+// import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+
 //Base
 const canvas = document.querySelector(".webgl");
 
@@ -27,6 +29,18 @@ gltfLoader.load(
     console.error(error);
   }
 );
+
+
+window.addEventListener("resize", () => {
+  sizes.width = window.innerWidth;
+  sizes.height = window.innerHeight;
+
+  camera.aspect = sizes.width / sizes.height;
+  camera.updateProjectionMatrix();
+
+  renderer.setSize(sizes.width, sizes.height);
+  renderer.render(scene, camera);
+});
 
 // let donut2 = null;
 // const gltfLoader2 = new THREE.GLTFLoader();

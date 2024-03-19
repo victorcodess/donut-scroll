@@ -20,6 +20,7 @@ body {
 
 .intro h1 {
   position: absolute;
+  text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -45,4 +46,22 @@ section h1 {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablet (768px - 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .intro h1,
+  section h1 {
+    font-size: 60px; /* Adjust font size for tablets */
+  }
+}
+
+/* Mobile (up to 767px) */
+@media only screen and (max-width: 767px) {
+  .intro h1,
+  section h1 {
+    font-size: 40px; /* Adjust font size for mobile devices */
+  }
 }
